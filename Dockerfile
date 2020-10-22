@@ -55,6 +55,14 @@ ENV PATH $PATH:$ANDROID_NDK_HOME
 # Export JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
+# install gradle
+RUN wget -q https://services.gradle.org/distributions/gradle-6.7-bin.zip \
+    && unzip gradle-6.7-bin.zip -d /opt \
+    && rm gradle-6.7-bin.zip
+
+ENV GRADLE_HOME /opt/gradle-6.7
+ENV PATH $PATH:/opt/gradle-6.7/bin
+
 # Support Gradle
 ENV TERM dumb
 ENV JAVA_OPTS "-Xms4096m -Xmx4096m"
