@@ -1,3 +1,5 @@
+# By: Alan Lampa
+
 FROM openjdk:8
 
 # Sets language to UTF8
