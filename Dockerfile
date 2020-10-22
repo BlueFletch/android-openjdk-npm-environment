@@ -52,9 +52,6 @@ ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/23.0.2
 ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/24.0.0
 ENV PATH $PATH:$ANDROID_NDK_HOME
 
-# Export JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-
 # install gradle
 RUN wget -q https://services.gradle.org/distributions/gradle-6.7-bin.zip \
     && unzip gradle-6.7-bin.zip -d /opt \
