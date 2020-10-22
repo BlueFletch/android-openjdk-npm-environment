@@ -5,6 +5,9 @@ FROM openjdk:8
 # Sets language to UTF8
 ENV LANG en_US.UTF-8
 
+RUN which java
+RUN javac -version
+
 # Installing packages
 RUN dpkg --add-architecture i386 && apt-get update -yqq && apt-get install -y \
   curl \
@@ -15,7 +18,6 @@ RUN dpkg --add-architecture i386 && apt-get update -yqq && apt-get install -y \
   libncurses5:i386 \
   libstdc++6:i386 \
   zlib1g:i386 \
-  openjdk-8-jdk \
   wget \
   unzip \
   vim \
